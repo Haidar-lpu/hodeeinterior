@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
 
-        const response = await fetch("/api/enquiry", {
+        const response = await fetch("https://hodeeinterior.onrender.com/api/enquiry", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (projectContainer) {
 
-    fetch("/api/projects")
+    fetch("https://hodeeinterior.onrender.com/api/projects")
       .then(res => res.json())
       .then(data => {
 
