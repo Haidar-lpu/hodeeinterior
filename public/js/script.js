@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
           card.className = "project-card";
 
           card.innerHTML = `
-            <img src="/uploads/${project.image}" alt="${project.title}">
+            <img src="https://hodeeinterior.onrender.com/uploads/${project.image}" alt="${project.title}">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <p><b>Status:</b> ${project.status}</p>
