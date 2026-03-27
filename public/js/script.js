@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // 🔥 IMPORTANT: Backend Base URL
   const BASE_URL = "https://hodeeinterior.onrender.com";
 
   // ================= NAV TOGGLE =================
