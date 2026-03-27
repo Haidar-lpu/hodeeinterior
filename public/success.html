@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Request Submitted | Hodee Interior</title>
+
+<meta name="description" content="Your enquiry has been successfully submitted to Hodee Interior. Our team will contact you shortly regarding your request.">
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/845/845646.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#f4f7fb,#e8f1ff);
+padding:20px;
+
+}
+
+.success-container{
+
+max-width:520px;
+width:100%;
+text-align:center;
+background:white;
+padding:50px 40px;
+border-radius:14px;
+box-shadow:0 10px 35px rgba(0,0,0,0.12);
+animation:fadeIn 0.8s ease;
+
+}
+
+.success-icon{
+
+width:80px;
+height:80px;
+margin:0 auto 20px;
+background:#22c55e;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+animation:pop 0.5s ease;
+
+}
+
+h2{
+font-size:28px;
+margin-bottom:10px;
+color:#111;
+}
+
+.muted{
+
+color:#666;
+font-size:16px;
+margin-top:8px;
+line-height:1.5;
+
+}
+
+.redirect-text{
+
+margin-top:10px;
+font-size:14px;
+color:#888;
+
+}
+
+.btn-home{
+
+display:inline-block;
+margin-top:30px;
+padding:14px 26px;
+background:linear-gradient(90deg,#00b4d8,#7c3aed);
+color:white;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+
+}
+
+.btn-home:hover{
+
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(0,0,0,0.2);
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes pop{
+
+from{
+transform:scale(0.7);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+@media(max-width:500px){
+
+.success-container{
+padding:40px 25px;
+}
+
+h2{
+font-size:24px;
+}
+
+.muted{
+font-size:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="success-container">
+
+<div class="success-icon">
+✓
+</div>
+
+<h2>Thank You!</h2>
+
+<p class="muted">
+Your enquiry has been successfully submitted.
+</p>
+
+<p class="muted">
+Our team will contact you within <strong>24 hours</strong>.
+</p>
+
+<p class="redirect-text">
+You will be redirected to the homepage shortly.
+</p>
+
+<a href="/" class="btn-home">
+Back to Home
+</a>
+
+</div>
+
+<script>
+
+/* Auto redirect after 5 seconds */
+
+setTimeout(function(){
+
+window.location.href="/";
+
+},10000);
+
+</script>
+
+</body>
+
+</html>

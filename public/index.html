@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hodee Interior</title>
+
+    <meta name="description" content="Interior design, architecture and home planning services">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Basic safety styles in case CSS fails */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media(max-width:768px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+
+        <div class="nav">
+
+            <div class="brand">
+                <div class="logo">
+                    <img src="/images/favicon.ico" alt="Hodee Interior Logo">
+                </div>
+
+                <div>
+                    <strong>Hodee Interior</strong><br>
+                    <small>Design • Architecture • Blueprints</small>
+                </div>
+            </div>
+
+            <!-- ✅ NAV MENU -->
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                    <li>
+                        <a class="cta" href="#contact">Get Quote</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- ✅ ADD THIS (IMPORTANT) -->
+            <div class="mobile-toggle">☰</div>
+
+        </div>
+
+    </header>
+
+
+    <section class="hero-section" id="home">
+
+        <!-- OVERLAY -->
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+
+            <!-- CONTENT -->
+            <div class="hero-content">
+
+                <span class="hero-tag">✨ Modern • Smart • Professional Design</span>
+
+                <h1>
+                    Transform Your House Into a <span>Luxury Dream Home</span>
+                </h1>
+
+                <p class="hero-desc">
+                    Hodee Interior helps you design stunning interiors, smart layouts,
+                    and architect-level plans — all in one place. From idea to execution.
+                </p>
+
+                <!-- CTA -->
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Get Free Consultation</a>
+                    <a href="#projects" class="btn-secondary">View Our Work</a>
+                </div>
+
+                <!-- TRUST STRIP -->
+                <div class="hero-trust">
+                    <div>⭐ 4.8 Rating</div>
+                    <div>🏡 50+ Projects</div>
+                    <div>⏱ On-Time Delivery</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="services-section" id="services">
+
+        <div class="services-container">
+
+            <!-- HEADER -->
+            <div class="services-header">
+                <h2>Premium Design & Architectural Services</h2>
+                <p>
+                    We deliver complete end-to-end solutions — from concept to execution —
+                    ensuring every space is functional, aesthetic, and future-ready.
+                </p>
+            </div>
+
+            <!-- GRID -->
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-couch"></i></div>
+                    <h3>Interior Design</h3>
+                    <p>Modern, aesthetic, and functional interiors tailored to your lifestyle.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-building"></i></div>
+                    <h3>Exterior & Facade</h3>
+                    <p>Stunning exteriors that elevate your home's visual appeal.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Architectural Planning</h3>
+                    <p>Smart layouts with structural accuracy and efficient space use.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Blueprint Development</h3>
+                    <p>Detailed construction-ready plans for smooth execution.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Space Planning</h3>
+                    <p>Optimized layouts for better flow, comfort, and usability.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-star"></i></div>
+                    <h3>Custom Home Design</h3>
+                    <p>Personalized layouts crafted for your dream lifestyle.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="container" id="projects">
+
+        <h2>Recent Projects</h2>
+
+        <div class="gallery" id="projectGallery">
+
+            Loading projects...
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="about-content">
+
+                <h5 class="tagline">Who We Are</h5>
+
+                <h2>
+                    Designing Spaces That Feel Like <span>Your Dream Home</span>
+                </h2>
+
+                <p class="description">
+                    At <strong>Hodee Interior</strong>, we don’t just design spaces —
+                    we create experiences. From modern interiors to architectural planning,
+                    our team transforms your vision into a stunning reality with precision, creativity, and trust.
+                </p>
+
+                <!-- FEATURES -->
+                <div class="features">
+
+                    <div class="feature-card">
+                        <h4>🏡 Smart Design</h4>
+                        <p>Modern, aesthetic & space-optimized solutions tailored to your lifestyle.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>📐 Expert Planning</h4>
+                        <p>Professional architectural and structural planning with accuracy.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>🌐 Remote Consultation</h4>
+                        <p>Get expert advice from anywhere with our seamless online service.</p>
+                    </div>
+
+                </div>
+
+                <!-- CTA -->
+                <a href="#contact" class="about-btn">Start Your Project →</a>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="about-image">
+                <img src="/images/about.jpg" alt="Interior Design">
+            </div>
+
+        </div>
+
+    </section>
+    <!-- CONTACT -->
+
+    <section class="container" id="contact">
+
+        <h2 style="margin-bottom:20px;">Contact & Get a Quote</h2>
+
+        <div class="contact-grid">
+
+            <!-- LEFT FORM -->
+            <form id="contactForm" class="card contact-form">
+
+                <div class="row">
+                    <div>
+                        <label>Your name</label>
+                        <input name="name" placeholder="Your full name" required>
+                    </div>
+
+                    <div>
+                        <label>Email</label>
+                        <input name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <label>Phone</label>
+                <input name="phone" placeholder="+91 XXXXX XXXXX" required>
+
+                <label>Service interested in</label>
+                <select name="service" required>
+                    <option value="interior">Interior Design Solutions</option>
+                    <option value="exterior">Exterior & Facade Design</option>
+                    <option value="architecture">Architectural Planning</option>
+                    <option value="blueprint">Residential Blueprint Development</option>
+                    <option value="layout">Custom Home Layout Optimization</option>
+                    <option value="consultation">Consultation</option>
+                </select>
+
+                <label>Project brief / message</label>
+                <textarea name="message" rows="5"
+                    placeholder="Tell us about your space, location, budget, and timeline"></textarea>
+
+                <div class="btn-group">
+                    <button class="primary">Send Request</button>
+
+                    <a href="tel:+916206608741" class="pill">Call Us</a>
+
+                    <a href="https://wa.me/916206608741" target="_blank" class="pill">WhatsApp</a>
+                </div>
+
+            </form>
+
+            <!-- RIGHT CONTACT DETAILS -->
+            <div class="card contact-info">
+
+                <h3>Our details</h3>
+
+                <p>
+                    <strong>Email:</strong> enquiry@hodeeinterior.com<br>
+                    <strong>Phone:</strong> +91-6206608741<br>
+                    Remote & on-site services
+                </p>
+
+                <h4 style="margin-top:20px;">Follow us</h4>
+
+                <a href="https://www.instagram.com/hodeeinterior/" class="pill">Instagram</a>
+
+                <div class="trust-section">
+
+                    <h4>Why Trust Us</h4>
+
+                    <div class="trust-items">
+
+                        <div class="trust-card">
+                            <span>⭐</span>
+                            <h5>50+ Happy Clients</h5>
+                            <p>Trusted by homeowners</p>
+                        </div>
+
+                        <div class="trust-card">
+                            <span>🏡</span>
+                            <h5>100+ Projects</h5>
+                            <p>Successfully delivered</p>
+                        </div>
+
+                        <div class="trust-card">
+                            <span>⏱</span>
+                            <h5>On-Time Delivery</h5>
+                            <p>No delays, guaranteed</p>
+                        </div>
+
+                        <div class="trust-card">
+                            <span>🤝</span>
+                            <h5>Expert Team</h5>
+                            <p>Skilled professionals</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="lux-footer">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-col brand">
+                <h2>Hodee Interior</h2>
+                <p>Crafting timeless interiors with elegance, precision, and modern aesthetics.</p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <p>Interior Design Solutions</p>
+                <p>Exterior & Facade Design</p>
+                <p>Architectural Planning</p>
+                <p>Residential Blueprint Development</p>
+                <p>Space Planning & Layout Design</p>
+                <p>Custom Home Layout Optimization</p>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: enquiry@hodeeinterior.com</p>
+                <p>Phone: +91 62066 08741</p>
+                <p>Location: India</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">© <span id="year"></span> Hodee Interior • Designed for global clients • <span
+                class="muted">Made with care</span></div>
+
+    </footer>
+
+
+    <style>
+        /* FOOTER */
+
+        .lux-footer {
+            background: #111;
+            color: #ddd;
+            padding: 60px 20px 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* Columns */
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 15px;
+            color: white;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        /* Brand */
+
+        .brand h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .brand p {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        /* Links */
+
+        .footer-col a {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        /* Text */
+
+        .footer-col p {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #aaa;
+        }
+
+        /* Bottom */
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px) {
+
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+        }
+    </style>
+
+    <script>
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+
+
+    <!-- I am the one -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            document.getElementById("year").innerText =
+                new Date().getFullYear();
+
+            loadProjects();
+
+        });
+
+
+        /* LOAD PROJECTS */
+
+        async function loadProjects() {
+
+            try {
+
+                const res = await fetch("/api/projects");
+
+                if (!res.ok) throw new Error("API error");
+
+                const projects = await res.json();
+
+                const gallery = document.getElementById("projectGallery");
+
+                gallery.innerHTML = "";
+
+                projects.forEach(p => {
+
+                    gallery.innerHTML += `
+
+<div class="project-card">
+
+<img src="/uploads/${p.image}" alt="${p.title}">
+
+<h3>${p.title}</h3>
+
+<p>${p.description}</p>
+
+<span>Status: ${p.status}</span>
+
+</div>
+
+`;
+
+                });
+
+            } catch (err) {
+
+                document.getElementById("projectGallery").innerHTML =
+                    "Unable to load projects.";
+
+                console.error(err);
+
+            }
+
+        }
+
+
+
+        /* CONTACT FORM */
+
+        document.getElementById("contactForm")
+            .addEventListener("submit", async e => {
+
+                e.preventDefault();
+
+                const formData = new FormData(e.target);
+
+                const data = Object.fromEntries(formData);
+
+                try {
+
+                    const res = await fetch("/api/enquiry", {
+
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify(data)
+
+                    });
+
+                    if (res.ok) {
+
+                        window.location.href = "/success.html";
+
+                    } else {
+
+                        alert("Submission failed. Please try again.");
+
+                    }
+
+                } catch (err) {
+
+                    alert("Network error. Please try again.");
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>
