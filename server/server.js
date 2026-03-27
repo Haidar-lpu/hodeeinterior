@@ -1,10 +1,7 @@
 require("dotenv").config({ path: __dirname + "/.env" });
 const { Resend } = require("resend");
 const resend = new Resend(process.env.RESEND_API_KEY);
-console.log("RESEND KEY:", process.env.RESEND_API_KEY);
 
-console.log("DB URL:", process.env.DATABASE_URL);
-console.log("EMAIL:", process.env.EMAIL_USER);
 const jwt = require("jsonwebtoken");
 const express = require("express");
 const cors = require("cors");
@@ -149,7 +146,7 @@ app.post("/api/enquiry", async (req, res) => {
         <p><b>Service:</b> ${service}</p>
         <p><b>Message:</b> ${message}</p>
       `
-    }).then(() => {
+    }).then(() => {  
       console.log("✅ Email sent");
     }).catch(err => {
       console.error("❌ Email error:", err);
