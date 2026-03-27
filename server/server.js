@@ -138,7 +138,7 @@ app.post("/api/enquiry", async (req, res) => {
     // 3️⃣ Send email in background (DON'T AWAIT)
     resend.emails.send({
       from: "Hodee Interior <onboarding@resend.dev>",
-      to: ["haidarali843119@gmail.com"],
+      to: ["hodeeinterior@gmail.com"],
       reply_to: email,  
       subject: "New Enquiry - Hodee Interior",
       html: `
