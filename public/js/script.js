@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  const BASE_URL = "https://hodeeinterior.onrender.com";
+
+  // ================= NAV TOGGLE =================
   const toggle = document.querySelector(".mobile-toggle");
   const navMenu = document.querySelector("#navMenu ul");
 
@@ -38,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ================= ENQUIRY FORM =================
   const enquiryForm = document.getElementById("enquiryForm");
 
   if (enquiryForm) {
@@ -66,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
 
-        const response = await fetch("https://hodeeinterior.onrender.com/api/enquiry", {
+        const response = await fetch(`${BASE_URL}/api/enquiry`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -95,11 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
+  // ================= PROJECTS =================
   const projectContainer = document.getElementById("projects");
 
   if (projectContainer) {
 
-    fetch("https://hodeeinterior.onrender.com/api/projects")
+    fetch(`${BASE_URL}/api/projects`)
       .then(res => res.json())
       .then(data => {
 
@@ -111,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
           card.className = "project-card";
 
           card.innerHTML = `
-            <img src="/uploads/${project.image}" alt="${project.title}">
+            <img src="${BASE_URL}/uploads/${project.image}" alt="${project.title}">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <p><b>Status:</b> ${project.status}</p>
@@ -122,10 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error("Project fetch error:", err);
+      });
 
   }
 
+  // ================= SCROLL ANIMATION =================
   const fadeElements = document.querySelectorAll(".fade-up");
 
   if (fadeElements.length > 0) {
