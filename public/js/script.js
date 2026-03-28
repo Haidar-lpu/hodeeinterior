@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ================= ENQUIRY FORM =================
-  const enquiryForm = document.getElementById("contactForm");
+  const enquiryForm = document.getElementById("contactForm")
+    || document.getElementById("enquiryForm");
 
   if (enquiryForm) {
 
@@ -51,11 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       e.preventDefault();
 
-      const name = document.getElementById("name")?.value.trim();
-      const email = document.getElementById("email")?.value.trim();
-      const phone = document.getElementById("phone")?.value.trim();
-      const service = document.getElementById("service")?.value;
-      const message = document.getElementById("message")?.value.trim();
+      // ✅ FORM DATA (NO ID ISSUE)
+      const formData = new FormData(enquiryForm);
+
+      const name = formData.get("name")?.trim();
+      const email = formData.get("email")?.trim();
+      const phone = formData.get("phone")?.trim();
+      const service = formData.get("service");
+      const message = formData.get("message")?.trim();
+
+      console.log({ name, email, phone, service, message }); // DEBUG
 
       if (!name || !email || !phone || !message) {
         alert("Please fill all fields");
@@ -64,14 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const phonePattern = /^[0-9]{10}$/;
 
-      if (!phonePattern.test(phone)) {
+      if (!phonePattern.test(phone.replace(/\D/g, ""))) {
         alert("Enter valid 10-digit phone number");
         return;
       }
 
       try {
 
-        const response = await fetch(`${BASE_URL}/api/enquiry`, {
+        const response = await fetch("https://hodeeinterior.onrender.com/api/enquiry", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -88,15 +93,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await response.json();
 
         if (response.ok) {
-          console.log("✅ Enquiry Success:", data);
+          alert("Form submitted successfully ✅");
           window.location.href = "/success.html";
         } else {
-          console.error("❌ Server Error:", data);
-          alert("Error: " + (data.error || "Submission failed"));
+          console.error("Server error:", data);
+          alert("Submission failed: " + (data.error || "Try again"));
         }
 
       } catch (err) {
-        console.error("❌ Fetch Error:", err);
+        console.error("Fetch error:", err);
         alert("Server connection error");
       }
 
