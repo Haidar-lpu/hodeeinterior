@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ================= ENQUIRY FORM =================
-  const enquiryForm = document.getElementById("enquiryForm");
+  const enquiryForm = document.getElementById("contactForm");
 
   if (enquiryForm) {
 

@@ -597,44 +597,31 @@
                 e.preventDefault();
 
                 const formData = new FormData(e.target);
-
                 const data = Object.fromEntries(formData);
 
                 try {
 
                     const res = await fetch("/api/enquiry", {
-
                         method: "POST",
-
                         headers: {
                             "Content-Type": "application/json"
                         },
-
                         body: JSON.stringify(data)
-
                     });
 
                     if (res.ok) {
-
                         window.location.href = "/success.html";
-
                     } else {
-
                         alert("Submission failed. Please try again.");
-
                     }
 
                 } catch (err) {
-
                     alert("Network error. Please try again.");
-
                 }
 
             });
-
-
     </script>
-    <script src="/js/script.js?v=2"></script>
+    <script src="/js/script.js?v=3"></script>
 
 </body>
 
