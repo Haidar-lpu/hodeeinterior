@@ -170,21 +170,20 @@ Client submits enquiry
 → Project displayed on homepage
 
 ---
-📦 All Dependencies
+## 📦 Dependencies
 
-The project uses the following Node.js dependencies:
-
-express – Backend framework for building APIs
-cors – Enables cross-origin resource sharing
-body-parser – Parses incoming request bodies
-pg – PostgreSQL database client
-multer – Handles file/image uploads
-cloudinary – Cloud-based image storage
-multer-storage-cloudinary – Cloudinary integration with Multer
-nodemailer – Sends email notifications
-resend – Modern email service (alternative to Nodemailer)
-dotenv – Manages environment variables
-
+| Package                     | Description                                      |
+|----------------------------|--------------------------------------------------|
+| express                    | Backend framework for building APIs              |
+| cors                       | Enables cross-origin resource sharing            |
+| body-parser                | Parses incoming request bodies                   |
+| pg                         | PostgreSQL database client                       |
+| multer                     | Handles file/image uploads                       |
+| cloudinary                 | Cloud-based image storage                        |
+| multer-storage-cloudinary  | Cloudinary integration with Multer               |
+| nodemailer                 | Sends email notifications                        |
+| resend                     | Modern email service (alternative to Nodemailer) |
+| dotenv                     | Manages environment variables                   |
 ## 💡 Future Enhancements
 
 * JWT-based secure admin authentication
