@@ -161,13 +161,19 @@ Password: admin123
 
 ## 🔄 System Flow
 
-Client submits enquiry
-→ Data stored in PostgreSQL
-→ Email notification sent to admin
-→ Admin views enquiry
-→ Admin contacts client via WhatsApp
-→ Admin uploads project
-→ Project displayed on homepage
+Client submits enquiry  
+⬇  
+Data stored in PostgreSQL  
+⬇  
+Email notification sent to admin  
+⬇  
+Admin views enquiry  
+⬇  
+Admin contacts client via WhatsApp  
+⬇  
+Admin uploads project  
+⬇  
+Project displayed on homepage  
 
 ---
 ## 📦 Dependencies
